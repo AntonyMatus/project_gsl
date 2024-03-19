@@ -15,14 +15,14 @@ class PublicController extends Controller
 
     public function projects()
     {
-        $projects = Projects::orderBy('publish_date', 'desc')->get();
-        return view('pages.projects', ['projects' => $projects]);
+        $projects = Projects::orderBy('publish_date', 'desc')->paginate(2)->withQueryString();
+        return view('pages.projects', compact('projects'));
     }
 
     public function single_project($id)
     {
         $project = Projects::find($id);
-        $related_project = Projects::select('*')->inRandomOrder()->take(1)->get();
+        $related_project = Projects::select('*')->inRandomOrder()->take(2)->get();
         return view('pages.single_project', ['project' => $project, 'related_projects' => $related_project]);
     }
 }

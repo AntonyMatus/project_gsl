@@ -23,8 +23,6 @@ class ProjectController extends Controller
     {
         $projects =  Projects::all();
         return view('pages.projects.index', ['projects' => $projects]);
-
-       
     }
 
     /**
@@ -32,7 +30,6 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        
         return view('pages.projects.create');
     }
 

@@ -8232,6 +8232,10 @@
         display: block;
     }
 
+    .title-proyectos {
+        font-size: 26px;
+    }
+
 }
 
 @media screen and (max-width: 400px) {
