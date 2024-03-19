@@ -11,6 +11,7 @@ class Projects extends Model
 
     protected $fillable = [
         'title',
+        'slug',
         'body',
         'publish_date',
         'status',

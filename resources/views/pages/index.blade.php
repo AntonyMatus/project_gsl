@@ -334,14 +334,14 @@
                             <img class="img-project-fit" alt="Proyecto 1" src="{{asset('storage/blogs/'.$project->cover_image)}}" data-no-retina="">
                             <div class="team-member-details bg-transparent-dark-gray align-items-center justify-content-center d-flex flex-column padding-2-half-rem-lr">
                                 <div class="social-icon w-100 position-absolute left-0px">
-                                    <a href="{{ route('single_project',[$project->id]) }}" class="text-slate-blue text-slate-blue-hover rounded-circle bg-white">
+                                    <a href="{{ route('single_project',[$project->slug]) }}" class="text-slate-blue text-slate-blue-hover rounded-circle bg-white">
                                         <i class="fas fa-link icon-very-small" aria-hidden="true"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <figcaption class="team-member-position text-left padding-35px-tb sm-padding-25px-tb">
-                            <a href="single_project.html">
+                            <a href="{{ route('single_project',[$project->slug]) }}">
                                 <div class="card-title-project">{{$project->title}}</div>
                             </a>
                         </figcaption>

@@ -101,7 +101,7 @@
 				</li>
 			</ul>
 			<p>
-				GSL <span id="year"></span>  - Desarrollado por <a href="https://www.buho-solutions.com" target="_blank" rel="noopener noreferrer">Búho Solutions</a>.
+				<a href="{{route('login')}}"> <i class="fa fa-user" aria-hidden="true"></i> </a> &nbsp; GSL <span id="year"></span>  - Desarrollado por <a href="https://www.buho-solutions.com" target="_blank" rel="noopener noreferrer">Búho Solutions</a>.
 			</p>
 		</div>
 	</footer>

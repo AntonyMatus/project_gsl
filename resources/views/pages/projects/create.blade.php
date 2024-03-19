@@ -67,7 +67,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div id="container-image"></div>
+                            <div class="col-xl-12">
+                                <div id="container-image"></div>
+                            </div>
                         </div>
                         
                         <div class="form-group mb-0">

@@ -50,6 +50,7 @@ class ProjectController extends Controller
 
             $newProject = new Projects();
             $newProject->title = $request->title;
+            $newProject->slug = Str::slug($request->title);
             $newProject->body = $request->body;
             $newProject->publish_date = $request->publish_date;
             $newProject->status = $request->status;
@@ -97,6 +98,7 @@ class ProjectController extends Controller
 
     $project = Projects::find($id);
         $project->title = $request->title;
+        $project->slug = Str::slug($request->title);
         $project->body = $request->body;
         $project->publish_date = $request->publish_date;
         $project->status = $request->status;

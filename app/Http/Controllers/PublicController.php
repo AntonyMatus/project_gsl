@@ -19,9 +19,9 @@ class PublicController extends Controller
         return view('pages.projects', compact('projects'));
     }
 
-    public function single_project($id)
+    public function single_project($slug)
     {
-        $project = Projects::find($id);
+        $project = Projects::where('slug', $slug)->first(); 
         $related_project = Projects::select('*')->inRandomOrder()->take(2)->get();
         return view('pages.single_project', ['project' => $project, 'related_projects' => $related_project]);
     }

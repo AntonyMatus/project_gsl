@@ -27,7 +27,7 @@
     
                     <!-- LOGO -->
                     <div class="topbar-left">
-                        <a class="logo">
+                        <a href="{{route('home')}}" class="logo">
                             <span>
                                 <img 
                                     loading="lazy"
