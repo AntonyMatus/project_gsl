@@ -1432,4 +1432,6 @@ footer .container p a:hover {
       	width: 20px;
     }
 }
+.form-results {padding: 13px 20px; clear: both; width: 100%; margin-top: 20px; font-size: 14px; line-height: 22px; z-index: 2; max-width: 100%; flex: 0 0 100%; -ms-flex: 0 0 100%;}
+
 

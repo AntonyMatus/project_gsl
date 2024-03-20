@@ -2,6 +2,10 @@
 
 @section('title', 'Introducción')
 
+@section('styles')
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+@endsection
+
 @section('content')
 <section class="p-0">
     <div class="hero-wrapper position-relative">
@@ -473,7 +477,8 @@
             <div class="col-xs-12">
                 <h1 class="title">Llevemos tu idea a la realidad</h1>
                 <h3 class="subtitle">¡Pongámonos en contacto!</h3>
-                <form  id="contact-form">
+                <form onsubmit="onSubmit(event)"  id="contact-form">
+                    @csrf
                     <div class="row">
                         <div class="col-xs-12 col-md-6 text-left">
                             <label for="name">Nombre Completo</label>
@@ -488,7 +493,7 @@
                             <label for="telefono">Teléfono</label>
                             <input 
                                 type="number" 
-                                name="telefono"
+                                name="phone"
                                 placeholder="" 
                                 required 
                             />
@@ -497,7 +502,7 @@
                             <label for="compañia">Compañía</label>
                             <input 
                                 type="text" 
-                                name="compañia"
+                                name="company"
                                 placeholder="" 
                                 required 
                             />
@@ -524,19 +529,15 @@
                                 <option>Proyectos arquitectónicos</option>
                                 <option>Trámites constructivos</option>
                                 <option>Proyectos estructurales</option>
-
-                                
-                                
-                                
-                                
                             </select>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <div class="g-recaptcha" data-sitekey="6LeQyoMpAAAAAD44_RSRi-8Nsg91AJd0dO4zD279" data-callback="enabledSubmit" ></div>
+                            <div class="h-captcha" data-sitekey="{{ env('HCAPTCHA_SITEKEY') }}"></div>
                         </div>
                         
                     </div>
                     <button id="send_message" type="submit">Enviar</button>
+                    <div class="form-results text-center"></div>
                 </form>
             </div>
         </div>
@@ -546,4 +547,5 @@
 @endsection
 
 @section('scripts')
+<script src="{{ asset('assets/js/contact.js') }}"></script>
 @endSection

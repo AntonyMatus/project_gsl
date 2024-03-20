@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicController::class, 'index'])->name('index');
 Route::get('/projects', [PublicController::class, 'projects'])->name('proyectos');
 Route::get('/single_project/{slug}', [PublicController::class, 'single_project'])->name('single_project');
+Route::get('/test_send_email', [PublicController::class, 'test_send_email'])->name('test_send_email');
 
 
 
