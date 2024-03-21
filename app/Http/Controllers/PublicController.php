@@ -40,7 +40,15 @@ class PublicController extends Controller
             'property_type' => ['required', 'string']
         ]);
 
-        try {
+        /*
+            Mail::to('antonyrebolledo@gmail.com')->send(new ContactMail($request));
+            return response()->json([
+                'ok' => true,
+                'message' => 'EL email fue Enviado con exito'
+            ], 201); 
+        */
+
+        try { 
 
             $g_recaptcha_response = $request['g-recaptcha-response'];
             $h_captcha_response = $request['h-captcha-response'];
@@ -64,14 +72,15 @@ class PublicController extends Controller
                     'ok' => false,
                     'message' => 'Ocurrio un error al revisar el captcha, intentalo de nuevo'
                 ], 400);
-            }
+            } 
 
             Mail::to('jesusrubi.adm@gmail.com')->send(new ContactMail($request));
 
+            /* jesusrubi.adm@gmail.com */
             return response()->json([
                 'ok' => true,
                 'message' => 'EL email fue Enviado con exito'
-            ], 201);
+            ], 201); 
 
         } catch (Exception $e) {
             return response()->json([

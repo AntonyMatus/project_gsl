@@ -21,7 +21,7 @@ Route::get('/', [PublicController::class, 'index'])->name('index');
 Route::get('/projects', [PublicController::class, 'projects'])->name('proyectos');
 Route::get('/single_project/{slug}', [PublicController::class, 'single_project'])->name('single_project');
 /* Route::get('/test_send_email', [PublicController::class, 'test_send_email'])->name('test_send_email'); */
-Route::post('/send_contact_mail', [PublicController::class, 'send_contact_mail'])->name('send_contact_mail');
+Route::post('/send_email_contact', [PublicController::class, 'send_contact_mail'])->name('send_contact_mail');
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {

@@ -3,15 +3,15 @@ const currentYear = new Date().getFullYear()
 document.querySelector('#year').innerHTML = currentYear
 
 /* form contact */
-
+/* 
 	var formulario = document.querySelector('#contact-form');
 
     formulario.addEventListener('submit', function(e){
         e.preventDefault();
         email();
-    });
+    }); */
 
-	function email() {
+	/* function email() {
         let datos = new FormData(formulario);
         fetch(`../backend/send-email.php`, {
             method: 'POST',
@@ -40,4 +40,4 @@ document.querySelector('#year').innerHTML = currentYear
                 });
             }
         })
-    }
+    } */

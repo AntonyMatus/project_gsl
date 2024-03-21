@@ -532,7 +532,7 @@
                             </select>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <div class="h-captcha" data-sitekey="{{ env('HCAPTCHA_SITEKEY') }}"></div>
+                            <div class="h-captcha" style="text-align: left" data-sitekey="{{ env('HCAPTCHA_SITEKEY') }}"></div>
                         </div>
                         
                     </div>

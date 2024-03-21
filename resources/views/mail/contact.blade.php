@@ -68,6 +68,14 @@
             line-height: inherit;
         }
 
+		.data_email a {
+			color: #fff !important;
+		}
+
+		.data_email a:hover{
+			color: #fff !important;
+		}
+
         a[x-apple-data-detectors="true"] {
             color: inherit !important;
             text-decoration: none !important;
@@ -178,7 +186,7 @@
 		<p style="line-height: 140%;">Nuevo lead desde mi página web, a continuación los datos</p>
 	<p style="line-height: 140%;">de contacto: </p>
 	<p style="line-height: 140%;">&nbsp;</p>
-	<p style="line-height: 140%;"><strong>Nombre: </strong>  {{$info->name}}  <br><strong>Teléfono de contacto: </strong>  {{$info->phone}} <br> <strong>Compañia: </strong>  {{$info->company}} <br><strong>Email: </strong> {{$info->email}} <br><strong>Tipo de propiedad de interés: </strong> {{ $info->property_type}}</p>
+	<p class="data_email" style="line-height: 140%; color: #ffffff"><strong>Nombre: </strong>  {{$info->name}}  <br><strong>Teléfono de contacto: </strong>  {{$info->phone}} <br> <strong>Compañia: </strong>  {{$info->company}} <br><strong>Email: </strong> {{$info->email}} <br><strong>Tipo de propiedad de interés: </strong> {{ $info->property_type}}</p>
 	<p style="line-height: 140%;">&nbsp;</p>
 	  </div>
 
