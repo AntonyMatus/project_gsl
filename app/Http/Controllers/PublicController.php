@@ -66,7 +66,7 @@ class PublicController extends Controller
                 ], 400);
             }
 
-            Mail::to('tony_rebo@hotmail.com')->send(new ContactMail($request));
+            Mail::to('jesusrubi.adm@gmail.com')->send(new ContactMail($request));
 
             return response()->json([
                 'ok' => true,
@@ -82,7 +82,7 @@ class PublicController extends Controller
     }
 
     public function test_send_email() {
-        Mail::to('tony_rebo@hotmail.com')->send(new ContactMail([
+        Mail::to('jesusrubi.adm@gmail.com')->send(new ContactMail([
             'name' => 'Tony',
             'phone' => '123456789',
             'company' => 'GSL',
