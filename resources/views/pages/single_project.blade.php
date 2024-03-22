@@ -35,35 +35,33 @@
         </div>
     </div>
 </section>
+
+@php
+        $counter_project = count($project->images);
+        function validate_project($counter) {
+        if($counter >= 3){
+            return '3';
+        }
+        if($counter == 2) {
+            return '2';
+        }
+        if($counter == 1) {
+            return '1';
+        }
+    }
+    @endphp
 <section class="big-section wow animate__fadeIn padding-five-top" style="visibility: visible; animation-name: fadeIn;">
     <div class="container">
         <div class="row ">
             <div class="col-12 position-relative text-center">
                 <div class="owl-carousel owl-theme mb-5" id="popup-gallery">
                     @foreach ($project->images as $image)
-                    <div class="item" style="display: flex; justify-content: center" >
-                        <a  href="{{asset('storage/blogs/'.$image->filename)}}"  title="">
-                            <img id="firs_carrousel_image" class="carousel-img" loading="lazy" src="{{asset('storage/blogs/'.$image->filename)}}" alt="Imagen 1">
-                        </a>
-                    </div>
+                        <div class="item" style="display: flex; justify-content: center" >
+                            <a  href="{{asset('storage/blogs/'.$image->filename)}}"  title="">
+                                <img id="firs_carrousel_image" class="carousel-img" loading="lazy" src="{{asset('storage/blogs/'.$image->filename)}}" alt="Imagen 1">
+                            </a>
+                        </div>
                     @endforeach
-                    
-                    {{--  <div class="item" style="display: flex; justify-content: center" >
-                        <a  href="https://via.placeholder.com/500"  title="">
-                            <img  class="carousel-img" loading="lazy" src="https://via.placeholder.com/500" alt="Imagen 2">
-                        </a>
-                        </div>
-                        <div class="item" style="display: flex; justify-content: center" >
-                            <a  href="https://via.placeholder.com/500"  title="">
-                                <img  class="carousel-img" loading="lazy" src="https://via.placeholder.com/500" alt="Imagen 3">
-                            </a>
-                        </div>
-                        <div class="item" style="display: flex; justify-content: center" >
-                            <a  href="https://via.placeholder.com/500"  title="">
-                                <img  class="carousel-img" loading="lazy" src="https://via.placeholder.com/500" alt="Imagen 4">
-                            </a>
-                            </div> 
-                    --}}
                 </div>
             </div>
         </div>
@@ -76,7 +74,7 @@
                 <ul class="medium-icon">
                     <li class="wow animate__fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
                         <a 
-                            href="https://www.facebook.com/sharer.php?u={{ route('single_project', [$project->id]) }}"
+                            href="https://www.facebook.com/sharer.php?u={{ route('single_project', [$project->slug]) }}"
                             target="_blank" 
                             rel="noopener noreferrer"
                             class="facebook"
@@ -86,7 +84,7 @@
                     </li>
                     <li class="wow animate__fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
                         <a 
-                            href="https://twitter.com/intent/tweet?url={{ route('single_project', [$project->id]) }}" 
+                            href="https://twitter.com/intent/tweet?url={{ route('single_project', [$project->slug]) }}" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             class="twitter"
@@ -106,7 +104,7 @@
                     </li>
                     <li class="wow animate__fadeIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                         <a
-                            href="https://www.linkedin.com/sharing/share-offsite/?url={{ route('single_project', [$project->id]) }}" 
+                            href="https://www.linkedin.com/sharing/share-offsite/?url={{ route('single_project', [$project->slug]) }}" 
                             target="_blank"
                             rel="noopener noreferrer"
                             class="linkedin"
@@ -152,60 +150,6 @@
                             </li>
                             
                         @endforeach
-                      {{--   <li class="grid-item wow animate__fadeIn md-h-500px sm-h-auto " style="visibility: visible; position: absolute; left: 0%; top: 0px; animation-name: fadeIn;">
-                            <div class="blog-post text-center border-radius-6px bg-white box-shadow box-shadow-large-hover">
-                                <div class="blog-post-image bg-dark-client">
-                                    <a href="#">
-                                        <img loading="lazy" src="https://via.placeholder.com/500" alt="" data-no-retina="">
-                                        <div class="blog-rounded-icon bg-white border-color-white absolute-middle-center">
-                                            <i class="feather icon-feather-arrow-right text-extra-dark-gray icon-extra-small"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="post-details padding-15px-all xl-padding-25px-lr text-start">
-                                    <a href="#" class="film-title">
-                                        Nombre del proyecto
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="grid-item wow animate__fadeIn md-h-500px sm-h-auto " style="visibility: visible; position: absolute; left: 0%; top: 0px; animation-name: fadeIn;">
-                            <div class="blog-post text-center border-radius-6px bg-white box-shadow box-shadow-large-hover">
-                                <div class="blog-post-image bg-dark-client">
-                                    <a href="#">
-                                        <img loading="lazy" src="https://via.placeholder.com/500" alt="" data-no-retina="">
-                                        <div class="blog-rounded-icon bg-white border-color-white absolute-middle-center">
-                                            <i class="feather icon-feather-arrow-right text-extra-dark-gray icon-extra-small"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="post-details padding-15px-all xl-padding-25px-lr text-start">
-                                    
-                                    <a href="#" class="film-title">
-                                        Nombre del proyecto
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="grid-item wow animate__fadeIn md-h-500px sm-h-auto " style="visibility: visible; position: absolute; left: 0%; top: 0px; animation-name: fadeIn;">
-                            <div class="blog-post text-center border-radius-6px bg-white box-shadow box-shadow-large-hover">
-                                <div class="blog-post-image bg-dark-client">
-                                    <a href="#">
-                                        <img loading="lazy" src="https://via.placeholder.com/500" alt="" data-no-retina="">
-                                        <div class="blog-rounded-icon bg-white border-color-white absolute-middle-center">
-                                            <i class="feather icon-feather-arrow-right text-extra-dark-gray icon-extra-small"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="post-details padding-15px-all xl-padding-25px-lr text-start">
-                                    
-                                    <a href="#" class="film-title">
-                                        Nombre del proyecto
-                                    </a>
-                                </div>
-                            </div>
-                        </li> --}}
-                    
                 </ul>
             </div>
         </div>
@@ -214,5 +158,32 @@
 @endsection
 
 @section('scripts')
-
+ <script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        items: {{ validate_project($counter_project) }},
+        margin: 10,
+        nav: true,
+        dots: false,
+        center: false,
+        autoplay: true,
+        smartSpeed: 2000,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 10,
+            },
+            700: {
+                items: 1,
+                margin: 20
+            },
+            1200: {
+                items: {{ validate_project($counter_project) }},
+                margin: 10,
+                autoplay: true
+            }
+        }
+    });
+ </script>
 @endsection

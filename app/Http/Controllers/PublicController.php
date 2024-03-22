@@ -19,14 +19,14 @@ class PublicController extends Controller
 
     public function projects()
     {
-        $projects = Projects::orderBy('publish_date', 'desc')->paginate(2)->withQueryString();
+        $projects = Projects::orderBy('created_at', 'desc')->paginate(3)->withQueryString();
         return view('pages.projects', compact('projects'));
     }
 
     public function single_project($slug)
     {
         $project = Projects::where('slug', $slug)->first(); 
-        $related_project = Projects::select('*')->inRandomOrder()->take(2)->get();
+        $related_project = Projects::select('*')->inRandomOrder()->take(3)->get();
         return view('pages.single_project', ['project' => $project, 'related_projects' => $related_project]);
     }
 
@@ -39,14 +39,6 @@ class PublicController extends Controller
             'email' => ['required', 'string', 'email',],
             'property_type' => ['required', 'string']
         ]);
-
-        /*
-            Mail::to('antonyrebolledo@gmail.com')->send(new ContactMail($request));
-            return response()->json([
-                'ok' => true,
-                'message' => 'EL email fue Enviado con exito'
-            ], 201); 
-        */
 
         try { 
 
