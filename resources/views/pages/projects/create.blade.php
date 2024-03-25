@@ -30,13 +30,19 @@
                             <div class="col-md-6 text-left">
                                 <div class="form-group">
                                     <label>Titulo</label>
-                                    <input class="form-control" type="text" name="title" id="foto" required>
+                                    <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="titulo" value="{{old('title')}}" >
+                                    @if ($errors->has('title'))
+                                        <p class="errors">{{ $errors->first('title') }}</p>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-md-6 text-left">
                                 <div class="form-group">
                                     <label for="">Fecha de publicacion</label>
-                                    <input class="form-control" type="date" value="{{date('yy-m-d')}}" name="publish_date" id="example-date-input" required>
+                                    <input class="form-control @error('publish_date')  is-invalid @enderror" type="date" value="{{date('yy-m-d')}}" name="publish_date" id="example-date-input" value="{{old('publish_date')}}" required>
+                                    @if ($errors->has('publish_date'))
+                                        <p class="errors">{{ $errors->first('publish_date') }}</p>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -47,6 +53,10 @@
                                     <option value="1">Publicado</option>
                                     <option value="0">No Publicado</option>
                                 </select>
+                                @if ($errors->has('status'))
+                                    <p class="errors">{{ $errors->first('status') }}</p>
+                                    
+                                @endif
                             </div>
                             
                         </div>
@@ -54,7 +64,11 @@
                             <div class="col-md-12 text-left">
                                 <div class="form-group">
                                     <label>Cuerpo del Proyecto</label>
-                                    <textarea id="elm1" name="body"></textarea>
+                                    <textarea id="elm1" name="body" class="@error('body') is-invalid @enderror" > {{old('body')}} </textarea>
+                                    @if ($errors->has('body'))
+                                        <p class="errors">{{ $errors->first('body') }}</p>
+                                        
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -63,6 +77,12 @@
                                 <div class="form-group">
                                     <label>Imagenes (La primera imagen seleccionada sera la imagen de portada) </label>
                                     <input id="file_images" type="file" name="images[]" class="filestyle" data-buttonname="btn-secondary" multiple required>
+                                    @if ($errors->has('images'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('images') }}</strong>
+                                        </span>
+                                        
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -78,7 +98,7 @@
                                     Crear
                                 </button>
                                 <a  class="btn btn-secondary waves-effect" href="{{route('projects.index')}}">
-                                    Cancel
+                                    Cancelar
                                 </a>
                             </div>
                         </div>

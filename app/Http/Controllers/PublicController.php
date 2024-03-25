@@ -19,7 +19,7 @@ class PublicController extends Controller
 
     public function projects()
     {
-        $projects = Projects::orderBy('created_at', 'desc')->paginate(3)->withQueryString();
+        $projects = Projects::orderBy('created_at', 'desc')->paginate(12)->withQueryString();
         return view('pages.projects', compact('projects'));
     }
 

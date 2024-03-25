@@ -34,8 +34,8 @@
                             <h5 class="card-title">Bienvenido a grupo de servicios lamu</h5>
                             <h6 class="card-subtitle mb-2 ">Desde el diseño hasta la entrega final. </h6>
                             <p class="card-text">Comprometidos a cumplir con los más altos estándares de construcción y diseño para superar tus expectativas y hacer realidad tus sueños. </p>
-                            <a href="#" class="btn btn-blue text-button">Proyectos</a>
-                            <a href="#" class="btn btn-black2 text-button margin-10px-left">Quiénes Somos &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href=" {{ route('proyectos') }} " class="btn btn-blue text-button">Proyectos</a>
+                            <a href=" {{ route('index') }}#intro " class="btn btn-black2 text-button margin-10px-left">Quiénes Somos &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -47,8 +47,8 @@
                     <h5 class="card-title">Bienvenido a grupo de servicios lamu</h5>
                     <h6 class="card-subtitle mb-2 ">Desde el diseño hasta la entrega final. </h6>
                     <p class="card-text">Comprometidos a cumplir con los más altos estándares de construcción y diseño para superar tus expectativas y hacer realidad tus sueños. </p>
-                    <a href="#" class="btn btn-blue text-button">Proyectos</a>
-                    <a href="#" class="btn btn-black2 text-button margin-10px-left">Quiénes Somos &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href=" {{ route('proyectos') }} " class="btn btn-blue text-button">Proyectos</a>
+                    <a href=" {{ route('index') }}#intro " class="btn btn-black2 text-button margin-10px-left">Quiénes Somos &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                   </div>
             </div>
         </div>
@@ -65,21 +65,21 @@
                     Fundada en 2019, la empresa ha demostrado un compromiso constante con la calidad, la innovación y la satisfacción del cliente.
                     
                 </p>
-                <a href="#" class="btn btn-blue text-button margin-1-half-rem-top font-weight-400">¡Contáctanos!</a>
+                <a href="{{ route('index','#contact') }}" class="btn btn-blue text-button margin-1-half-rem-top font-weight-400">¡Contáctanos!</a>
                 <div class="row row-cols-3 row-cols-lg-3 row-cols-sm-2 client-logo-style-05 margin-3-half-rem-top align-items-end">
                     <!-- start client logo item -->
                     <div class="col text-center md-margin-40px-bottom xs-margin-50px-bottom wow animate__fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                        <a href="#!"><img src="{{asset('assets/images/logos/azana.png')}}" alt="" class="lg-w-1000px" data-no-retina=""></a>
+                        <a href=" {{ url('https://azana-apartments.com/') }} " target="_blank"><img src="{{asset('assets/images/logos/azana.png')}}" alt="" class="lg-w-1000px" data-no-retina=""></a>
                     </div>
                     <!-- end client logo item -->
                     <!-- start client logo item -->
                     <div class="col text-center md-margin-40px-bottom xs-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
-                        <a href="#!"><img src="{{ asset('assets/images/logos/zoe.png') }} " alt="" class="lg-w-1000px" data-no-retina=""></a>
+                        <a href=" {{ url('https://zoe-townhouses.com/') }} " target="_blank"><img src="{{ asset('assets/images/logos/zoe.png') }} " alt="" class="lg-w-1000px" data-no-retina=""></a>
                     </div>
                     <!-- end client logo item -->
                     <!-- start client logo item -->
                     <div class="col text-center xs-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-                        <a href="#!"><img src="{{ asset('assets/images/logos/aurum.png') }} " alt="" class="lg-w-1000px" data-no-retina=""></a>
+                        <a href=" {{ url('https://aurumapartments.mx/') }} " target="_blank"><img src="{{ asset('assets/images/logos/aurum.png') }} " alt="" class="lg-w-1000px" data-no-retina=""></a>
                     </div>
                     <!-- end client logo item -->
                     
@@ -90,7 +90,7 @@
     </div>
 </section>
 
-<section class="apartments-section bg-white2">
+<section class="apartments-section bg-white2" id="servicios">
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-12 col-md-12 texts">
@@ -171,7 +171,7 @@
 </section>
 
 
-<section class="area-negocios">
+<section class="area-negocios" id="negocios">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 col-lg-12 wow animate__fadeInRight" data-wow-delay="0.2s">
@@ -257,7 +257,7 @@
                     Nuestro equipo está preparado para llevar a cabo cualquier desafío con excelencia y dedicación. Nuestro compromiso con la calidad, la innovación y la satisfacción del cliente nos convierte en tu socio ideal en el camino hacia la realización de tus proyectos. 
                 </p>
                 <div class="mt-3 mx-auto mx-lg-0">
-                    <a href="index.html" class="btn btn-blue btn-client">Más Información</a>
+                    <a href=" {{route('index')}}#contact " class="btn btn-blue btn-client">Más Información</a>
                 </div>
             </div>
             <div class="col-12 col-xl-7 offset-xl-1 col-lg-8 last-paragraph-no-margin wow animate__fadeIn" data-wow-duration="0.3" style="visibility: visible; animation-name: fadeIn;">
@@ -486,6 +486,8 @@
                                 type="text" 
                                 name="name"
                                 placeholder="" 
+                                class="@error('name') is-invalid @enderror"
+                                value="{{ old('name') }}"
                                 required 
                             />
                         </div>
@@ -494,7 +496,9 @@
                             <input 
                                 type="number" 
                                 name="phone"
-                                placeholder="" 
+                                placeholder=""
+                                class="@error('phone') is-invalid @enderror"
+                                value="{{ old('phone') }}" 
                                 required 
                             />
                         </div>
@@ -504,6 +508,8 @@
                                 type="text" 
                                 name="company"
                                 placeholder="" 
+                                class="@error('company') is-invalid @enderror"
+                                value="{{ old('company') }}"
                                 required 
                             />
                         </div>
@@ -513,6 +519,8 @@
                                 type="email" 
                                 name="email"
                                 placeholder="" 
+                                class="@error('email') is-invalid @enderror"
+                                value="{{ old('email') }}"
                                 required 
                             />
                         </div>

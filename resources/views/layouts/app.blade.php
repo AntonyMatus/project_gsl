@@ -52,10 +52,10 @@
                                 <a href="{{route('index')}}#intro" class="nav-link text-uppercase">Introducción</a>
                             </li>
                             <li class="nav-item dropdown simple-dropdown">
-                                <a href="{{route('index')}}#townhouses" class="nav-link text-uppercase">Servicios</a>
+                                <a href="{{route('index')}}#servicios" class="nav-link text-uppercase">Servicios</a>
                             </li>
                             <li class="nav-item dropdown simple-dropdown">
-                                <a href="{{route('index')}}#gallery" class="nav-link text-uppercase">Áreas de Negocio</a>
+                                <a href="{{route('index')}}#negocios" class="nav-link text-uppercase">Áreas de Negocio</a>
                             </li>
                             <li class="nav-item dropdown simple-dropdown">
                                 <a href="{{route('proyectos')}}" class="nav-link text-uppercase">Proyectos</a>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="col-auto col-lg-3 sm-d-none d-flex justify-content-center">
-                    <a type="button" class="btn-contact" href="https://wa.link/p29m20" target="_blank" rel="noopener noreferrer">
+                    <a type="button" class="btn-contact" href="{{ route('index', ['#contact']) }}" rel="noopener noreferrer">
                         Contáctanos
                     </a>
                 </div>

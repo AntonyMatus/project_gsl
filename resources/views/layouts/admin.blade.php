@@ -159,6 +159,7 @@
         <script src="{{asset('admin/assets/js/metisMenu.min.js')}}"></script>
         <script src="{{asset('admin/assets/js/jquery.slimscroll.js')}}"></script>
         <script src="{{asset('admin/assets/js/waves.min.js')}}"></script>
+        <script src="{{asset('plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
 
         <!-- App js -->
         <script src="{{asset('admin/assets/js/app.js')}}"></script>
