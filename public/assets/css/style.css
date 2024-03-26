@@ -2776,7 +2776,7 @@ header.sticky .navbar.header-dark .navbar-toggler-line { background: #000; }
 
 .sticky .navbar.header-light .navbar-nav .nav-link, .sticky .navbar.header-light .header-search-icon > a, .sticky .navbar.header-light .header-social-icon > a, .sticky .navbar.header-light .header-cart-icon > a, .sticky .navbar.header-light .header-language > a, .sticky .navbar.header-light .nav-bar-contact { color: #fff !important; }
 .sticky .navbar.header-light .header-push-button .push-button > span {background: #232323}
-.sticky .navbar.header-dark .navbar-nav .nav-link, .sticky .navbar.header-dark .header-search-icon > a, .sticky .navbar.header-dark .header-social-icon > a, .sticky .navbar.header-dark .header-cart-icon > a, .sticky .navbar.header-dark .header-language > a { color: #000 !important; }
+.sticky .navbar.header-dark .navbar-nav .nav-link, .sticky .navbar.header-dark .header-search-icon > a, .sticky .navbar.header-dark .header-social-icon > a, .sticky .navbar.header-dark .header-cart-icon > a, .sticky .navbar.header-dark .header-language > a { color: #000 !important; border-color: transparent; background: transparent; }
 .sticky .navbar.header-light .btn.btn-white { background-color: #232323; border-color: #232323; color: #fff; }
 
 /* header navigation white */
@@ -2849,7 +2849,7 @@ header.sticky .navbar.header-dark .navbar-toggler-line { background: #000; }
 .top-bar.navbar-dark .header-cart-icon > a:hover,
 .top-bar.navbar-dark .header-language > a:hover, 
 .top-bar.navbar-dark .header-language.dropdown-style-01 .btn:hover { color: #33354D !important; cursor: pointer; }
-.navbar.navbar-light .navbar-nav .nav-link { color: #33354D; }
+.navbar.navbar-light .navbar-nav .nav-link { color: #33354D; border-color: transparent; background: transparent;  }
 .navbar.navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus { color: rgba(0,0,0,.5); cursor: pointer; }

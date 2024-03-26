@@ -148,7 +148,7 @@
 		<tr>
 		    <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="center">
                 <h1 style="margin: 0px; color: #ffffff; line-height: 140%; text-align: center; word-wrap: break-word; font-size: 22px; font-weight: 400;"><strong>Nuevo cliente potencial interesado.</strong></h1>
-                <img align="center" border="0" src="https://via.placeholder.com/280x80" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: auto;max-width: 480px;" width="480" class="v-src-width v-src-max-width"/>
+                <img align="center" border="0" src="https://grupolamu.com/assets/images/logos/logo_gsl.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: auto;max-width: 480px;" width="480" class="v-src-width v-src-max-width"/>
             </td>
 		</tr>
 	  </tbody>

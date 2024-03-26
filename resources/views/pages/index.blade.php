@@ -55,7 +55,7 @@
     </div>
 </section>
 
-<section class="azana-section" id="intro">
+<section class="azana-section" id="_intro">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-xs-12 col-sm-6 texts">
@@ -65,7 +65,7 @@
                     Fundada en 2019, la empresa ha demostrado un compromiso constante con la calidad, la innovación y la satisfacción del cliente.
                     
                 </p>
-                <a href="{{ route('index','#contact') }}" class="btn btn-blue text-button margin-1-half-rem-top font-weight-400">¡Contáctanos!</a>
+                <a href="{{ route('index') }}#contacts" class="btn btn-blue text-button margin-1-half-rem-top font-weight-400">¡Contáctanos!</a>
                 <div class="row row-cols-3 row-cols-lg-3 row-cols-sm-2 client-logo-style-05 margin-3-half-rem-top align-items-end">
                     <!-- start client logo item -->
                     <div class="col text-center md-margin-40px-bottom xs-margin-50px-bottom wow animate__fadeIn" style="visibility: visible; animation-name: fadeIn;">
@@ -90,7 +90,7 @@
     </div>
 </section>
 
-<section class="apartments-section bg-white2" id="servicios">
+<section class="apartments-section bg-white2" id="_services">
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-12 col-md-12 texts">
@@ -171,7 +171,7 @@
 </section>
 
 
-<section class="area-negocios" id="negocios">
+<section class="area-negocios" id="_business">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 col-lg-12 wow animate__fadeInRight" data-wow-delay="0.2s">
@@ -257,7 +257,7 @@
                     Nuestro equipo está preparado para llevar a cabo cualquier desafío con excelencia y dedicación. Nuestro compromiso con la calidad, la innovación y la satisfacción del cliente nos convierte en tu socio ideal en el camino hacia la realización de tus proyectos. 
                 </p>
                 <div class="mt-3 mx-auto mx-lg-0">
-                    <a href=" {{route('index')}}#contact " class="btn btn-blue btn-client">Más Información</a>
+                    <a href=" {{route('index')}}#contacts " class="btn btn-blue btn-client">Más Información</a>
                 </div>
             </div>
             <div class="col-12 col-xl-7 offset-xl-1 col-lg-8 last-paragraph-no-margin wow animate__fadeIn" data-wow-duration="0.3" style="visibility: visible; animation-name: fadeIn;">
@@ -352,115 +352,7 @@
                     </figure>
                 </div>
             @endforeach
-            <!-- end team item -->
-            <!-- start team item -->
-            {{-- <div class="col team-style-02 text-center">
-                <figure>
-                    <div class="team-member-image border-radius-5px overflow-hidden">
-                        <img alt="Proyecto 2" src="assets/images/home/proyecto2.png" data-no-retina="">
-                        <div class="team-member-details bg-transparent-dark-gray align-items-center justify-content-center d-flex flex-column padding-2-half-rem-lr">
-                            <div class="social-icon w-100 position-absolute left-0px">
-                                <a href="single_project.html" class="text-slate-blue text-slate-blue-hover rounded-circle bg-white">
-                                    <i class="fas fa-link icon-very-small" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption class="team-member-position text-left padding-35px-tb sm-padding-25px-tb">
-                        <a href="single_project.html">
-                            <div class="card-title-project">Azana Boutique Apartments</div>
-                        </a>
-                    </figcaption>
-                </figure>
-            </div> --}}
-            <!-- end team item -->
-            <!-- start team item -->
-            {{--  <div class="col team-style-02 text-center">
-                <figure>
-                    <div class="team-member-image border-radius-5px overflow-hidden">
-                        <img alt="Proyecto 3" src="assets/images/home/proyecto3.png" data-no-retina="">
-                        <div class="team-member-details bg-transparent-dark-gray align-items-center justify-content-center d-flex flex-column padding-2-half-rem-lr">
-                            <div class="social-icon w-100 position-absolute left-0px">
-                                <a href="single_project.html" class="text-slate-blue text-slate-blue-hover rounded-circle bg-white">
-                                    <i class="fas fa-link icon-very-small" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption class="team-member-position text-left padding-35px-tb sm-padding-25px-tb">
-                        <a href="single_project.html">
-                            <div class="card-title-project">Zinalba</div>
-                        </a>
-                    </figcaption>
-                </figure>
-                </div> 
-            --}}
-            <!-- end team item -->
-            <!-- start team item -->
-            {{--     <div class="col team-style-02 text-center padding-2-half-rem-top">
-                    <figure>
-                        <div class="team-member-image border-radius-5px overflow-hidden">
-                            <img alt="" src="assets/images/home/proyecto1.png" data-no-retina="">
-                            <div class="team-member-details bg-transparent-dark-gray align-items-center justify-content-center d-flex flex-column padding-2-half-rem-lr">
-                                <div class="social-icon w-100 position-absolute left-0px">
-                                    <a href="single_project.html" class="text-slate-blue text-slate-blue-hover rounded-circle bg-white">
-                                        <i class="fas fa-link icon-very-small" aria-hidden="true"></i>
-                                    </a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <figcaption class="team-member-position text-center padding-35px-tb sm-padding-25px-tb">
-                            <a href="single_project.html">
-                                <div class="card-title-project">Natura 126, 127 y 128</div>
-                            </a>
-                        </figcaption>
-                    </figure>
-                </div> --}}
-            <!-- end team item -->
-            <!-- start team item -->
-            {{--     <div class="col team-style-02 text-center padding-2-half-rem-top">
-                    <figure>
-                        <div class="team-member-image border-radius-5px overflow-hidden">
-                            <img alt="" src="assets/images/home/proyecto2.png" data-no-retina="">
-                            <div class="team-member-details bg-transparent-dark-gray align-items-center justify-content-center d-flex flex-column padding-2-half-rem-lr">
-                                <div class="social-icon w-100 position-absolute left-0px">
-                                    <a href="single_project.html" class="text-slate-blue text-slate-blue-hover rounded-circle bg-white">
-                                        <i class="fas fa-link icon-very-small" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <figcaption class="team-member-position text-center padding-35px-tb sm-padding-25px-tb">
-                            <a href="single_project.html">
-                                <div class="card-title-project">INARA</div>
-                            </a>
-                        </figcaption>
-                    </figure>
-                </div> --}}
-            <!-- end team item -->
-            <!-- start team item -->
-            {{--      <div class="col team-style-02 text-center padding-2-half-rem-top">
-                    <figure>
-                        <div class="team-member-image border-radius-5px overflow-hidden">
-                            <img alt="" src="assets/images/home/proyecto3.png" data-no-retina="">
-                            <div class="team-member-details bg-transparent-dark-gray align-items-center justify-content-center d-flex flex-column padding-2-half-rem-lr">
-                                <div class="social-icon w-100 position-absolute left-0px">
-                                    <a href="single_project.html" class="text-slate-blue text-slate-blue-hover rounded-circle bg-white">
-                                        <i class="fas fa-link icon-very-small" aria-hidden="true"></i>
-                                    </a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <figcaption class="team-member-position text-center padding-35px-tb sm-padding-25px-tb">
-                            <a href="single_project.html">
-                                <div class="card-title-project">Zendera 115</div>
-                            </a>
-                        </figcaption>
-                    </figure>
-                </div> --}}
-            <!-- end team item -->
+            
         </div>
         <div class="row margin-3-half-rem-top">
             <div class="col-xl-12 text-center">
@@ -471,7 +363,8 @@
         </div>
     </div>
 </section>
-<section class="contact-section" id="contact">
+
+<section class="contact-section" id="_contacts">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">

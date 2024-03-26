@@ -49,25 +49,25 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="navbar-nav alt-font2 align-items-center">
                             <li class="nav-item dropdown megamenu">
-                                <a href="{{route('index')}}#intro" class="nav-link text-uppercase">Introducción</a>
+                                <button onclick="moverA('_intro')" class="nav-link text-uppercase">Introducción</button>
                             </li>
                             <li class="nav-item dropdown simple-dropdown">
-                                <a href="{{route('index')}}#servicios" class="nav-link text-uppercase">Servicios</a>
+                                <button onclick="moverA('_services')" class="nav-link text-uppercase">Servicios</button>
                             </li>
                             <li class="nav-item dropdown simple-dropdown">
-                                <a href="{{route('index')}}#negocios" class="nav-link text-uppercase">Áreas de Negocio</a>
+                                <button onclick="moverA('_business')"  class="nav-link text-uppercase">Áreas de Negocio</button>
                             </li>
                             <li class="nav-item dropdown simple-dropdown">
                                 <a href="{{route('proyectos')}}" class="nav-link text-uppercase">Proyectos</a>
                             </li>
                             <li class="nav-item dropdown simple-dropdown">
-                                <a href="{{route('index')}}#contact" class="nav-link text-uppercase">Contacto</a>
+                                <button onclick="moverA('_contacts')" class="nav-link text-uppercase">Contacto</button>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-auto col-lg-3 sm-d-none d-flex justify-content-center">
-                    <a type="button" class="btn-contact" href="{{ route('index', ['#contact']) }}" rel="noopener noreferrer">
+                    <a type="button" class="btn-contact" href="{{ route('index') }}#contacts" rel="noopener noreferrer">
                         Contáctanos
                     </a>
                 </div>
@@ -85,19 +85,19 @@
 			</div>
 			<ul>
 				<li>
-					<a href="#!">Introducción</a>
+					<a href=" {{ route('index') }}#_intro ">Introducción</a>
 				</li>
 				<li>
-					<a href="#!">Servicios</a>
+					<a href=" {{ route('index') }}#_services ">Servicios</a>
 				</li>
 				<li>
-					<a href="#!">Áreas de Negocio</a>
+					<a href=" {{ route('index') }}#_business ">Áreas de Negocio</a>
 				</li>
 				<li>
-					<a href="#!">Proyectos</a>
+					<a href=" {{ route('proyectos') }} ">Proyectos</a>
 				</li>
 				<li>
-					<a href="#!">Contacto</a>
+					<a href=" {{ route('index') }}#contacts ">Contacto</a>
 				</li>
 			</ul>
 			<p>
@@ -114,7 +114,6 @@
 	<!-- sweatalert -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src=" {{ asset('./assets/js/app.js') }} "></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script type="text/javascript" src=" {{ asset('assets/js/jquery.min.js') }} "></script>
 	<script type="text/javascript" src=" {{ asset('assets/js/theme-vendors.min.js') }} "></script>
 	<script type="text/javascript" src=" {{ asset('assets/js/owl.carousel.min.js') }} "></script>
@@ -133,6 +132,10 @@
 		function enabledSubmit(response){
 			const submit = document.getElementById('send_message');
 			submit.disabled = false;
+		}
+
+		function moverA(idDelElemento) {
+    		window.location.href ="/"+"#" + idDelElemento;
 		}
 	</script>
 
