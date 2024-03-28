@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Introducción')
+@section('title', 'INICIO')
 
 @section('styles')
 <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
@@ -12,7 +12,7 @@
         <div class="container-intro p-0 m-0">
             <div class="row intro-row">
                 <div class="col-12 col-xl-8">
-                    <img class="object-fit-contain" src="{{ asset('assets/images/intro/imagen-planing.jpeg') }}" alt="placeholder img">
+                    <img loading="lazy" class="object-fit-contain" src="{{ asset('assets/images/intro/imagen-planing.jpeg') }}" alt="placeholder img">
                 </div>
                 <div class="col-12 col-xl-4 container-info">
                     <div class="alt-font2 margin-10px-left text-info-2">
@@ -35,7 +35,7 @@
                             <h6 class="card-subtitle mb-2 ">Desde el diseño hasta la entrega final. </h6>
                             <p class="card-text">Comprometidos a cumplir con los más altos estándares de construcción y diseño para superar tus expectativas y hacer realidad tus sueños. </p>
                             <a href=" {{ route('proyectos') }} " class="btn btn-blue text-button">Proyectos</a>
-                            <a href=" {{ route('index') }}#intro " class="btn btn-black2 text-button margin-10px-left">Quiénes Somos &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href=" {{ route('index') }}#_intro " class="btn btn-black2 text-button margin-10px-left">Quiénes Somos &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
     </div>
 </section>
 
-<section class="big-section wow animate__fadeIn pt-0 padding-2-half-rem-bottom" style="visibility: visible; animation-name: fadeIn;">
+<section id="offerts" class="big-section wow animate__fadeIn pt-0 padding-2-half-rem-bottom" style="visibility: visible; animation-name: fadeIn;">
     <div class="container">
         <div class="row justify-content-center wow animate__fadeIn" style="visibility: visible; animation-name: fadeIn;">
             <div class="col-12 col-xl-4 col-lg-4 col-sm-7 d-flex flex-column text-center text-lg-start md-margin-6-rem-bottom">
@@ -385,7 +385,7 @@
                             />
                         </div>
                         <div class="col-xs-12 col-md-6 text-left">
-                            <label for="telefono">Teléfono</label>
+                            <label for="phone">Teléfono</label>
                             <input 
                                 type="number" 
                                 name="phone"
@@ -396,7 +396,7 @@
                             />
                         </div>
                         <div class="col-xs-12 col-md-6 text-left">
-                            <label for="compañia">Compañía</label>
+                            <label for="company">Compañía</label>
                             <input 
                                 type="text" 
                                 name="company"
@@ -420,6 +420,7 @@
                         <div class="col-xs-12 col-md-6 text-left">
                             <label for="property_type">Servicio Interesado</label>
                             <select
+                                id="property_type"
                                 name="property_type"
                                 required 
                             >

@@ -33,7 +33,7 @@
         <nav class="navbar navbar-expand-lg top-space  navbar-light bg-white  header-dark fixed-top navbar-boxed header-reverse-scroll">
             <div class="container-fluid nav-header-container justify-content-between">
                 <div class="col-auto col-lg-2 col-sm-5 ps-lg-0 me-auto me-lg-0 " >
-                    <a class="navbar-brand" href="{{route('index')}}">
+                    <a class="navbar-brand" href="{{route('index')}}" aria-label="GSL">
                         <img  src="{{ asset('assets/images/logos/logo_gsl.svg')}}" alt="" class="default-logo" >
                         <img src="{{ asset('assets/images/logos/logo_gsl.svg')}}" alt="" class="alt-logo" >
                         <img src="{{asset('assets/images/logos/gsl-logo-mobile.svg')}}" class="mobile-logo float-left" alt="" >
@@ -58,7 +58,7 @@
                                 <button onclick="moverA('_business')"  class="nav-link text-uppercase">Áreas de Negocio</button>
                             </li>
                             <li class="nav-item dropdown simple-dropdown">
-                                <a href="{{route('proyectos')}}" class="nav-link text-uppercase">Proyectos</a>
+                                <a href="{{route('proyectos')}}" class="nav-link text-uppercase" aria-label="Proyectos">Proyectos</a>
                             </li>
                             <li class="nav-item dropdown simple-dropdown">
                                 <button onclick="moverA('_contacts')" class="nav-link text-uppercase">Contacto</button>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="col-auto col-lg-3 sm-d-none d-flex justify-content-center">
-                    <a type="button" class="btn-contact" href="{{ route('index') }}#contacts" rel="noopener noreferrer">
+                    <a type="button" class="btn-contact" href="{{ route('index') }}#contacts" rel="noopener noreferrer" aria-label="Contactanos">
                         Contáctanos
                     </a>
                 </div>

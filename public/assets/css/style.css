@@ -3387,8 +3387,10 @@ header .header-cart-icon .cart-count { position: absolute; top: -6px; right: -10
 .grid.gutter-medium li { padding:7px 7px; }
 .grid.gutter-large li { padding:10px 10px; }
 .grid.gutter-extra-large li { padding:15px; }
+.grid.gutter-extra-large2 li { padding:15px; }
 .grid.gutter-double-extra-large li { padding:20px; }
 .grid.gutter-triple-extra-large li { padding:30px; }
+
 
 /* grid 6 column */
 .grid.grid-6col li { width: 16.67%; list-style: none; }

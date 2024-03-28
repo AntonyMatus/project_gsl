@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Proyecto indivudual')
+@section('title',  $project->title )
 
 @section('content')
 <section id="project">
@@ -142,7 +142,7 @@
                                         </a>
                                     </div>
                                     <div class="post-details padding-15px-all xl-padding-25px-lr text-start">
-                                        <a href="{{ route('single_project', [$related_project->id]) }}" class="film-title">
+                                        <a href="{{ route('single_project', [$related_project->slug]) }}" class="film-title">
                                             {{ $related_project->title }}
                                         </a>
                                     </div>

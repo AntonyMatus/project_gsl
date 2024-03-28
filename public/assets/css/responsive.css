@@ -6,6 +6,23 @@
  * Copyright (c) 2021 themezaa.com
  */
 
+@media screen and (max-width: 4732px) and (min-width:1950px){
+    .padding-seven-lr {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .team-style-02 figure .team-member-image {
+        height: 385px;
+    }
+
+    .img-project-fit {
+        width: 386px;
+        height: 386px;
+        object-fit: cover;
+    }
+}
+
 @media (min-width: 1901px) {
     .litho-parallax-bg { width: 45%; }
 }
@@ -8160,7 +8177,7 @@
     }
 
     .card-text {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .text-button {
@@ -8168,15 +8185,16 @@
     }
 
     .apartments-section .container .row .texts .title, .title-section {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     .title-section {
-        top: -280px;
+        top: -330px;
+        left: 30px;
     }
 
     .apartments-section .container .row .texts p {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .text-card-servicios {
@@ -8190,10 +8208,15 @@
 
     .area-negocios {
         padding-bottom: 8rem;
+        padding-top: 80px;
     }
 
     .slider-navigation-style-03.swiper-button-next, .slider-navigation-style-03.swiper-button-prev {
-        bottom: -292px;
+        bottom: -375px;
+    }
+
+    #offerts {
+        margin-top: 20px;
     }
     
     .title-negocios {
@@ -8201,7 +8224,7 @@
     }
 
     .description-negocios {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .btn-client {
@@ -8236,6 +8259,20 @@
         font-size: 26px;
     }
 
+    .azana-section .container .row .texts .title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: 0px;
+    }
+
+    .azana-section .container .row .texts p {
+        font-size: 15px;
+    }
+
+    .last-paragraph-no-margin p:last-of-type {
+        font-size: 13px;
+    }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -8265,6 +8302,8 @@
     .azana-section .container .row .texts .title {
         font-size: 26px;
         text-align-last: left;
+        line-height: 40px;
+        margin-top: 0;
     }
 
     .azana-section .container .row .texts .cards .item p{
@@ -8273,7 +8312,7 @@
     }
 
     .azana-section .container .row .texts p {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .sm-text-center {
@@ -8302,8 +8341,12 @@
     }
 
     .apartments-section .container .row .texts p {
-        font-size: 12px;
+        font-size: 15px;
         color: #000;
+    }
+
+    .apartments-section .container .row .texts .title, .title-section {
+        font-size: 26px;
     }
 
     .apartments-section .container .row .image {
@@ -8320,7 +8363,7 @@
     }
 
     .last-paragraph-no-margin p:last-of-type {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .icon-servicios {
@@ -8330,7 +8373,7 @@
 
     .title-section {
         font-size: 26px;
-        top: -280px;
+        top: -290px;
         left: 30px;
     }
 
@@ -8339,14 +8382,14 @@
     }
 
     .info-section {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 18px;
     }
 
     
 
     .slider-navigation-style-03.swiper-button-next, .slider-navigation-style-03.swiper-button-prev {
-        bottom: -292px;
+        bottom: -320px;
     }
 
     .slider-navigation-style-03.swiper-button-prev {
